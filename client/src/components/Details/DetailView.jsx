@@ -31,7 +31,7 @@ const DetailView = () => {
     }
 
     return (
-        <div className="mx-16 mt-8 md:mx-0 md:px-16 shadow-md">
+        <div className="mx-16 mt-4 md:mx-0 md:px-16 shadow-md">
             <div className="shadow-sm">
             <img src={post.picture || url} alt="post" className="w-screen h-96 object-cover"/>
             <div className="p-4">
