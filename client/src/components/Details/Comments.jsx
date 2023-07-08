@@ -1,14 +1,7 @@
 import { useState, useEffect, useContext } from 'react';
-import { TextareaAutosize, Button, styled } from '@mui/material';
 import { DataContext } from '../../context/DataProvider';
 import { API } from '../../service/api';
 import Comment from './Comment';
-
-const StyledTextArea = styled(TextareaAutosize)`
-    height: 100px !important;
-    width: 100%; 
-    margin: 0 20px;
-`;
 
 const initialValue = {
     name: '',
