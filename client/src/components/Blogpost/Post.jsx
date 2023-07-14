@@ -11,13 +11,13 @@ const Post = ({ post }) => {
     };
   
     return (
-      <div className="flex flex-col items-center h-[362px] bg-gray-700 shadow-md m-1">
+      <div className="flex flex-col items-center h-[362px] bg-slate-700 shadow-md m-1">
         <img
           src={url}
           alt="post"
           className="w-full object-cover h-40"
         />
-        <p className="text-slate-200 text-xs px-2 py-1">
+        <p className="text-slate-100 text-xs px-2 py-1">
           {post.categories}
         </p>
         <h2 className="text-lg font-semibold px-2 py-1 text-white">

@@ -45,11 +45,11 @@ const Comments = ({ post }) => {
     }
     
     return (
-        <div className="container flex flex-col">
-            <div className="flex items-center mb-1 shadow-sm p-4">
-                <img src={url} alt="dp" className="w-12 h-12 rounded-full mr-3 mt-4"/>   
+        <div className="container flex flex-col text-slate-100 bg-slate-800">
+            <div className="flex items-center mb-1 shadow-lg p-4 bg-gray-800">
+                <img src={url} alt="dp" className="w-12 h-12 rounded-full mr-3 mt-4 bg-slate-400"/>   
                 <textarea
-                    className="w-full border border-gray-300 mt-5 px-2 py-1 rounded-md focus:outline-none focus:border-blue-500"
+                    className="w-full border border-gray-300 mt-5 px-2 py-1 rounded-md focus:outline-none focus:border-blue-500 bg-slate-700 text-slate-100"
                     placeholder="what's on your mind?"
                     onChange={(e) => handleChange(e)} 
                     value={comment.comments}

@@ -30,7 +30,7 @@ const DetailView = () => {
     }
 
     return (
-        <div className="mx-16 mt-4 md:mx-0 md:px-16 shadow-md">
+        <div className="mx-16 md:mx-0 md:px-16 shadow-md bg-slate-800">
             <div className="shadow-sm">
             <img src={post.picture || url} alt="post" className="w-screen h-96 object-cover"/>
             <div className="p-4">
@@ -39,23 +39,23 @@ const DetailView = () => {
                     account.username === post.username && 
                     <>  
                      <div className="flex flex-row">   <Link to={`/update/${post._id}`}>
-                            <MdEdit color="primary" className="m-1 p-1 border border-gray-500 rounded-md text-blue-500 w-12 h-12"/>
+                            <MdEdit color="primary" className="m-1 p-1 border border-slate-300 rounded-md text-blue-500 w-12 h-12"/>
                             </Link>
-                        <MdDelete onClick={() => deleteBlog()} className="m-1 p-1 border border-gray-500 rounded-md text-red-500 w-12 h-12 cursor-pointer" />
+                        <MdDelete onClick={() => deleteBlog()} className="m-1 p-1 border border-slate-300 rounded-md text-red-500 w-12 h-12 cursor-pointer" />
                     </div>
                     </>
                 }
             </div>
-            <h3 className="text-3xl font-semibold text-center my-10">{post.title}</h3>
+            <h3 className="text-3xl font-semibold text-center my-10 text-slate-100">{post.title}</h3>
 
-            <div className="text-gray-600 flex my-5">
+            <div className="text-slate-100 flex my-5">
                 <Link to={`/?username=${post.username}`}>
-                    <p className="text-xl font-semibold text-gray-800">Author: <span style={{fontWeight: 600}}>{post.username}</span></p>
+                    <p className="text-xl font-semibold text-slate-100">Author: <span style={{fontWeight: 600}}>{post.username}</span></p>
                 </Link>
                 <p className="ml-auto">{new Date(post.createdDate).toDateString()}</p>
             </div>
 
-            <p className="text-md font-semibold text-gray-800">{post.description}</p>
+            <p className="text-md font-semibold text-slate-100">{post.description}</p>
             </div>
             </div>
             <Comments post={post} />

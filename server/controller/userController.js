@@ -6,6 +6,7 @@ const Token=require('../models/token.js');
 const User =require('../models/user.js');
 
 const signupUser = async (request, response) => {
+    console.log(request.body);
     try {
         const hashedPassword = await bcrypt.hash(request.body.password, 10);
 
@@ -23,7 +24,7 @@ const signupUser = async (request, response) => {
 
 
 const loginUser = async (request, response) => {
-    //console.log(request.body);
+    console.log(request.body);
     let user = await User.findOne({ username: request.body.username });
     if (!user) {
         return response.status(400).json({ msg: 'Username does not match' });

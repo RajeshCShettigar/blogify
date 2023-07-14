@@ -10,13 +10,13 @@ const Comment = ({ comment, setToggle }) => {
        setToggle(prev => !prev);
     }
     return (
-        <div className="bg-blue-100 p-4 mb-2">
+        <div className="bg-gray-800 text-slate-100 p-4 mb-2">
             <div className="mb-[5px] flex">
                 <h5 className="font-semibold text-base mr-20">{comment.name}</h5>
-                <p className="text-sm text-gray-500">{new Date(comment.date).toDateString()}</p>
+                <p className="text-sm text-gray-100">{new Date(comment.date).toDateString()}</p>
                 { comment.name === account.username && <MdDelete onClick={() => removeComment()} className="ml-auto"/> }
             </div>
-            <p className="text-gray-700">{comment.comments}</p>
+            <p className="text-gray-300">{comment.comments}</p>
         </div>
     )
 }
