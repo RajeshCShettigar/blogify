@@ -80,11 +80,11 @@ const Login = ({ isUserAuthenticated }) => {
   };
 
   return (
-    <div className="bg-home bg-cover w-full h-screen flex flex-col items-center justify-center">
+    <div className="bg-slate-800 w-full h-screen flex flex-col items-center justify-center">
       <h1 className="text-5xl text-center w-full mb-4 mt-4 font-bold text-white px-3 py-3 font-shantell">
        Welcome to Blogify
         </h1>
-      <div className="flex flex-col bg-white rounded-md shadow-md ">
+      <div className="flex flex-col bg-gray-700 rounded-md shadow-md ">
         <div className="flex items-center justify-center p-8">
           {account === "login" ? (
             <div className="p-25">
@@ -94,7 +94,7 @@ const Login = ({ isUserAuthenticated }) => {
                 onChange={(e) => onValueChange(e)}
                 name="username"
                 placeholder="Enter Username"
-                className="block w-full rounded-sm p-2 mb-3 border"
+                className="block w-full rounded-md p-2 mb-3 border bg-slate-700"
               />
               <input
                 type="password"
@@ -102,7 +102,7 @@ const Login = ({ isUserAuthenticated }) => {
                 onChange={(e) => onValueChange(e)}
                 name="password"
                 placeholder="Enter Password"
-                className="block w-full rounded-sm p-2 mb-3 border"
+                className="block w-full rounded-md p-2 mb-3 border bg-slate-700"
               />
 
               {error && <p className="text-red-500 text-xs mt-2">{error}</p>}
@@ -130,21 +130,21 @@ const Login = ({ isUserAuthenticated }) => {
                 onChange={(e) => onInputChange(e)}
                 name="name"
                 placeholder="Enter Name"
-                className="block w-full rounded-sm p-2 mb-3 border"
+                className="block w-full rounded-md p-2 mb-3 border bg-slate-700"
               />
               <input
                 type="text"
                 onChange={(e) => onInputChange(e)}
                 name="username"
                 placeholder="Enter Username"
-                className="block w-full rounded-sm p-2 mb-3 border"
+                className="block w-full rounded-md p-2 mb-3 border bg-slate-700"
               />
               <input
                 type="password"
                 onChange={(e) => onInputChange(e)}
                 name="password"
                 placeholder="Enter Password"
-                className="block w-full rounded-sm p-2 mb-3 border"
+                className="block w-full rounded-md p-2 mb-3 border bg-slate-700"
               />
 
               <button
