@@ -10,6 +10,7 @@ import Update from './components/create/Update';
 import About from './components/Home/About';
 import Contact from './components/Home/Contact';
 import Login from './components/Account/Login';
+import "react-toastify/dist/ReactToastify.css";
 
 const PrivateRoute = ({ isAuthenticated, ...props }) => {
   const token = sessionStorage.getItem('accessToken');

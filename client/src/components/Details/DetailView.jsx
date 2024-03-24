@@ -32,7 +32,7 @@ const DetailView = () => {
     return (
         <div className="mx-16 md:mx-0 md:px-16 shadow-md bg-slate-800">
             <div className="shadow-sm">
-            <img src={post.picture || url} alt="post" className="w-screen h-96 object-cover"/>
+            <img src={post.picture || url} alt="post" className="w-screen h-96"/>
             <div className="p-4">
             <div className="float-right">
                 {   

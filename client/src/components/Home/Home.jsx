@@ -3,7 +3,7 @@ import Posts from "../Blogpost/Posts";
 
 const Home = () => {
   return (
-    <div>
+    <div className="bg-slate-700">
       <div className="bg-cover">
         <img src="http://rhombusinfotech.com/blog/wp-content/themes/rhombus/images/blog-banner1.png" alt="bg-cover w-full h-[300px]" />
       </div>

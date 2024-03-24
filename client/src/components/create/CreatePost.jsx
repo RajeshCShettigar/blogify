@@ -91,16 +91,16 @@ const CreatePost = () => {
           type="text"
           name="title"
           placeholder="Title"
-          className="flex-1 ml-5 px-2 py-1 rounded-md border border-gray-300 focus:outline-none focus:border-blue-500"
+          className="flex-1 ml-5 px-2 py-1 rounded-md border border-gray-300 focus:outline-none focus:border-blue-500 bg-slate-700"
           onChange={handleChange}
         />
       </div>
 
       <textarea
-        rows={5}
+        rows={15}
         placeholder="Tell your story..."
         name="description"
-        className="w-full border border-gray-300 mt-5 px-2 py-1 rounded-md focus:outline-none focus:border-blue-500"
+        className="w-full border border-gray-300 mt-5 px-2 py-1 rounded-md focus:outline-none focus:border-blue-500 bg-slate-700"
         onChange={handleChange}
       />
       <div className="flex justify-center">

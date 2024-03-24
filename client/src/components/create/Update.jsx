@@ -64,26 +64,27 @@ const Update = () => {
         setPost({ ...post, [e.target.name]: e.target.value });
     }
     return (
-        <div className="m-36 shadow-md bg-gray-100">
-            <img className="w-[100%] h-[50vh] object-cover" src={post.picture || url} alt="post" />
-            <div className="flex flex-row mt-3">
+        <div className="mt-8 mx-8 shadow-md p-2">
+            <img className="w-screen h-[50vh] object-cover" src={post.picture || url} alt="post" />
+            <div className="flex flex-row mt-3 items-center">
                 <label htmlFor="fileInput">
-                    <IoMdAddCircle color="action" />
+                    <IoMdAddCircle color="action" className='h-8 w-8' />
                 </label>
                 <input
                     type="file"
                     id="fileInput"
+                    className="hidden"
                     onChange={(e) => setFile(e.target.files[0])}
                 />
-                <input onChange={(e) => handleChange(e)} value={post.title} name='title' placeholder="Title" className="flex-1 mr-4 text-2xl" />
-                <button onClick={() => updateBlogPost()} variant="contained" color="primary">Update</button>
+                <input onChange={(e) => handleChange(e)} value={post.title} name='title' placeholder="Title" className="flex-1 mr-4 text-2xl bg-gray-600 text-gray-900 rounded-md" />
+                <button onClick={() => updateBlogPost()} variant="contained" className='mx-auto px-4 py-2 rounded-md bg-blue-500 text-gray-200'>Update</button>
             </div>
-            <input
-                className="w-full mt-12 shadow-sm p-2 border-blue-500 border-1"
-                rowsMin={5}
+            <textarea
+                rows={15}
                 placeholder="Tell your story..."
-                name='description'
-                onChange={(e) => handleChange(e)} 
+                name="description"
+                className="w-full border border-gray-300 mt-5 px-2 py-1 rounded-md focus:outline-none focus:border-blue-500 bg-gray-700 scrollbar-w-0"
+                onChange={handleChange} 
                 value={post.description}
             />
         </div>

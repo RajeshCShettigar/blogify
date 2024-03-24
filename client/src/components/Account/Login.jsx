@@ -2,6 +2,7 @@ import React, { useState, useEffect, useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import { API } from "../../service/api";
 import { DataContext } from "../../context/DataProvider";
+import {ToastContainer,toast} from 'react-toastify';
 
 const loginInitialValues = {
   username: "",
@@ -55,11 +56,12 @@ const Login = ({ isUserAuthenticated }) => {
         name: response.data.name,
         username: response.data.username,
       });
-
+      toast.success("Login Successfull");
       isUserAuthenticated(true);
       setLogin(loginInitialValues);
       navigate("/");
     } else {
+      toast.error("Something went wrong! please try again later");
       showError("Something went wrong! please try again later");
     }
   };
@@ -69,9 +71,11 @@ const Login = ({ isUserAuthenticated }) => {
     if (response.isSuccess) {
       showError("");
       setSignup(signupInitialValues);
+      toast.success("Signup Successfull");
       toggleAccount("login");
     } else {
       showError("Something went wrong! please try again later");
+      toast.error("Something went wrong! please try again later");
     }
   };
 
@@ -166,6 +170,18 @@ const Login = ({ isUserAuthenticated }) => {
           )}
         </div>
       </div>
+      <ToastContainer 
+              position="bottom-center"
+              autoClose={5000}
+              hideProgressBar={false}
+              newestOnTop={false}
+              closeOnClick
+              rtl={false}
+              pauseOnFocusLoss
+              draggable
+              pauseOnHover
+              theme="light"
+      />
     </div>
   );
 };
